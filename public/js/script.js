@@ -63,6 +63,7 @@ updog.events = () => {
 			description: $('#description').val(),
 			photo: $('#photo').val()
 		}
+		
 		updog.createDog(dog)
 			.then(() => $('.add-dogo').toggleClass('show'))
 			.then(updog.getDogs)
