@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const Pet = require('./models/pet');
 const bodyParser = require('body-parser');
 
-mongoose.connect('mongodb://localhost/updog');
+const DBURL = process.env.MONGODB_URI || 'mongodb://localhost/updog';
+mongoose.connect(DBURL);
 
 // short circuiting
 const port = process.env.PORT || 8080;
